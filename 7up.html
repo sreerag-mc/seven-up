@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sprite</title>
+    <style>
+       @import url('https://fonts.googleapis.com/css2?family=Croissant+One&family=Poppins:wght@300&family=Roboto:wght@300&display=swap');
+body
+{
+    margin: 0;
+    background: rgb(14, 247, 68);
+    display: flex;
+    justify-content: center;
+    height: 100vh;
+    font-family: 'Roboto', sans-serif;
+    color: white;
+}
+.btn
+{
+    padding: 15px;
+    border: none;
+    color: rgb(14, 14, 14);
+    font-weight: bold;
+    background: rgb(203, 246, 11);
+    border-radius: 15px;
+    transition: all 0.3s ease-in-out;
+}
+.btn:hover
+{
+    background: rgb(12, 102, 4);
+    color: white;
+    cursor: pointer;
+    scale: 1.1
+
+}
+.card
+{
+    position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 150px;
+    height: 150px;
+    border-radius: 50%;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
+    background: rgb(3, 112, 49);
+    transition: all 0.5s ease-in-out;
+    cursor: pointer;
+    margin-top:200px;
+}
+.logo
+{
+    width: 150px;
+    height: 150px;
+    border-radius: 50%;
+    object-fit: cover;
+    cursor: pointer;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
+    transition: 0.5s ease-in-out;
+}
+
+.card:hover .logo{
+    scale:0;
+}
+.card:hover
+{
+    border-radius: 15px;
+    width: 450px;
+    height: 280px;
+}
+.text-section{
+    position: absolute;
+    text-align: justify;
+    top: 10px;
+    left: 20px;
+    width: 180px;
+    opacity: 0;
+    transition: all 0.3s ease-in-out;
+}
+.card:hover .text-section{
+    opacity: 1;
+}
+.bottle {
+    position: absolute;
+    top: -20px;
+    right: -100px;
+    width: 450px;
+    height: auto;
+    object-fit: cover;
+    opacity: 0;
+    transform: rotate(15deg); /* Corrected rotation property */
+    transition: all 0.3s ease-in-out;
+    
+}
+.card:hover .bottle
+{
+    opacity: 1;
+}
+
+    </style>
+
+</head>
+<body>
+    <section class="card">
+        <img src="/img/logo.png"  class="logo">
+        <div class="text-section">
+            <h1><b><i>Sprite</i></b> </h1>
+            <p>Sprite is a clear, lemon and lime-flavored soft drink created by the Coca-Cola Company. Sprite comes in multiple flavors.</p>
+            <button class="btn">Click</button>
+        </div>
+        <img src="/img/bottle.png" class="bottle">
+    </section>
+</body>
+</html>
